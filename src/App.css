@@ -1,6 +1,9 @@
 /* All Basics */
+*{
+  margin: 0;
+  padding: 0;
+}
 .App {
-
 }
 .clearfix::after {
   content: "";
@@ -8,7 +11,7 @@
   display: table;
 }
 .main-content{
-  margin-top: 60px;
+  margin-top:60px;
 }
 /* Top Nav */
 .top-nav{
@@ -64,9 +67,31 @@
 .nav li{
   list-style: none;
   float: left;
-  padding:20px 15px;
+  padding:35px 15px;
 }
 .nav li a{
   text-decoration: none;
   color: #ffffff;
+}
+
+/* Banner */
+.myinfo-banner{
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: -175px;
+  padding:25px 10px;
+  color: #ffffff;
+}
+.myinfo{
+  width: 65%;
+  text-align: justify;
+  margin: 0 auto;
+}
+.myinfo h1{
+  padding:15px 0;
+  font-size: 22px;
+}
+.myinfo p{
+  text-indent: 50px;
+  font-size: 18px;
 }
