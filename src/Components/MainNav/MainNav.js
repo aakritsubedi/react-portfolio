@@ -3,22 +3,21 @@ import React from 'react';
 function MainNav(props){
     let navItems= props.navItems.map(elements => {
         return (
-            <li key={elements.id}>
-                <a href={elements.link}>{elements.title}</a>
+            <li key={elements.id} className='nav-item'>
+                <a href={elements.link} className='nav-link'>{elements.title}</a>
             </li>
         )
     })
     let mainNav =(
-        <div className='main-nav clearfix'>
-            <div className='photo'>
-                <img src={props.myInfo.img} className='nav-photo' title={props.myInfo.name} alt={props.myInfo.name}/>
-            </div>
-            <div>
-                <ul className='nav'>
-                    {navItems}
-                </ul>
-            </div>
-        </div>
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+            <a class="navbar-brand" href="#">
+            <img src={props.myInfo.img} className='img-responsive' id='pic-logo' title={props.myInfo.name} alt={props.myInfo.name}/>
+
+            </a>
+            <ul className='navbar-nav'>
+                {navItems}
+            </ul>
+        </nav>
     )
     return mainNav;
 }

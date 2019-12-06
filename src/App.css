@@ -48,50 +48,10 @@
   font-size: 12px;
 }
 
-/* Main Nav */
-.main-nav{
-  background-color: #4C4B4B;
-}
-.main-nav .photo{
-  float: left;
-}
-.main-nav .photo img{
-  height: 60px;
-  width: 60px;
+/*  */
+#pic-logo{
+  height: 40px;
+  width: 40px;
   border-radius: 50%;
-  padding:15px 25px;
-}
-.main-nav .nav{
-  float: right;
-}
-.nav li{
-  list-style: none;
-  float: left;
-  padding:35px 15px;
-}
-.nav li a{
-  text-decoration: none;
-  color: #ffffff;
-}
-
-/* Banner */
-.myinfo-banner{
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position-y: -175px;
-  padding:25px 10px;
-  color: #ffffff;
-}
-.myinfo{
-  width: 65%;
-  text-align: justify;
-  margin: 0 auto;
-}
-.myinfo h1{
-  padding:15px 0;
-  font-size: 22px;
-}
-.myinfo p{
-  text-indent: 50px;
-  font-size: 18px;
+  margin:0 15px;
 }
