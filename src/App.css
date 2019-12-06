@@ -11,7 +11,7 @@
   display: table;
 }
 .main-content{
-  margin-top:60px;
+  margin-top:65px;
 }
 /* Top Nav */
 .top-nav{
@@ -23,6 +23,7 @@
   top:0;
   left: 0;
   right: 0;
+  z-index: 2;
 }
 .logo{
   margin-right: 25px;

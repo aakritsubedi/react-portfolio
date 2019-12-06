@@ -9,10 +9,9 @@ function MainNav(props){
         )
     })
     let mainNav =(
-        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-            <a class="navbar-brand" href="#">
+        <nav className="navbar navbar-expand-sm bg-dark navbar-dark">
+            <a className="navbar-brand" href={props.myInfo.website}>
             <img src={props.myInfo.img} className='img-responsive' id='pic-logo' title={props.myInfo.name} alt={props.myInfo.name}/>
-
             </a>
             <ul className='navbar-nav'>
                 {navItems}
