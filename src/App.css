@@ -68,8 +68,12 @@
   left: 0;
   right: 0;
   z-index: 2;
+  opacity: 0.6;
 }
-
+.footer:hover{
+  opacity: 1;
+  line-height: 45px;
+}
 .copyright{
   float: left;
 }
