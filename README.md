@@ -1,6 +1,5 @@
 <h1>
     Make your <code>Portfolio</code>
-    <small>create your portfolio</small>
 </h1>
 <h3>Introduction</h3>
 <p>
