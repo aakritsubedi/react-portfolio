@@ -5,6 +5,8 @@ import MainNav from '../Components/MainNav/MainNav';
 import Banner from '../Components/Banner/Banner';
 import Education from '../Components/Education/Education';
 import ProjectWork from '../Components/ProjectWork/ProjectWork';
+import Footer from '../Components/Footer/Footer';
+
 
 import * as myData from '../Constants/myInfo';
 
@@ -39,23 +41,28 @@ class Portfolio extends Component{
     }
     render(){
         let portfolio=(
-            <div className='container'>
+            <>
+                <div className='container'>
                 <TopNav data={this.socialMediaData} myInfo={this.myInfo}/>
                 <div className='main-content'>
                     <MainNav myInfo={this.myInfo} navItems={this.navItems}/>
                     <Banner myInfo={this.myInfo}/>
                     <div className='row p-2'>
                         <div className='col-md-12'>
+                            <a name='education'></a>
                             <Education myEducation={this.myEducation}/>
                         </div>
                     </div>
                     <div className='row p-2'>
                         <div className='col-md-12'>
+                            <a name='project'></a>
                             <ProjectWork myProject={this.myProject} />
                         </div>
                     </div>
                 </div>
-            </div>
+                </div>
+                <Footer name={this.myInfo.name}/>
+            </>
         );
 
         return portfolio;
