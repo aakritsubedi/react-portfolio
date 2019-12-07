@@ -7,7 +7,7 @@ function Education(props){
                 <br/>
                 <span className='h4'>{elements.collegeName}</span><br/>
                 <small className='text-muted'>{elements.title}</small>
-                <span className='float-right'>{elements.date}</span>
+                <small className='float-right font-weight-light'>{elements.date}</small>
             </li>
         );
     })

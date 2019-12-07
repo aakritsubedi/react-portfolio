@@ -9,6 +9,7 @@ import Footer from '../Components/Footer/Footer';
 
 
 import * as myData from '../Constants/myInfo';
+import Skills from '../Components/Skills/Skills';
 
 class Portfolio extends Component{
     constructor(){
@@ -42,7 +43,7 @@ class Portfolio extends Component{
     render(){
         let portfolio=(
             <>
-                <div className='container'>
+                <div className='container' style={{paddingBottom:'50px'}}>
                 <TopNav data={this.socialMediaData} myInfo={this.myInfo}/>
                 <div className='main-content'>
                     <MainNav myInfo={this.myInfo} navItems={this.navItems}/>
@@ -60,6 +61,7 @@ class Portfolio extends Component{
                         </div>
                     </div>
                 </div>
+                <Skills mySkills={this.myInfo.skills} skillContent={this.myInfo.skillsContent}/>
                 </div>
                 <Footer name={this.myInfo.name}/>
             </>

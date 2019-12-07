@@ -1,14 +1,17 @@
 import React from 'react';
 
-import { FaFacebookF,FaTwitter,FaInstagram,FaGithub } from "react-icons/fa";
+import { FaFacebookF,FaTwitter,FaInstagram,FaLinkedinIn,FaGithub } from "react-icons/fa";
 let allData = {
     myInfo:{
         name: 'Aakrit Subedi',
         email: 'aakritsubedi9@gmail.com',
         contact: '+977-9808858237',
+        location: 'Basundhara,Kathmandu',
         img: 'http://aakritsubedi.com.np/images/profile_new.jpg',
         aboutMe: 'Honors student of Kantipur Engineering College, Computer Engineering. Academic credentials are reinforced by programming experience gained during an internship with some companies. Strong knowledge of object-oriented programing and web development tools using PHP and Javascript. Known as a self-starter, team player, and multitasker--strive to consistently exceed expectations.',
         bgImg: 'https://images.unsplash.com/photo-1533294455009-a77b7557d2d1?ixlib:rb-1.2.1&auto:format&fit:crop&w:750&q:80',
+        skills: ['HTML','CSS','Javascript','jQuery','react.js','Express','PHP','Laravel','Java','C++','C','MySQL','Latex'],
+        skillsContent: 'I have learned lots of important aspects about computer science throughout my years in school. For example, I have learned about multithreading, image processing, GUI (Graphical User Interface) development, etc. I am comfortable with object oriented languages such as Javascript,PHP,Java. I also enjoy powerful low level languages such as C.',
         website: 'http://aakritsubedi.com.np'
     },
     socialMediaData:[
@@ -28,7 +31,12 @@ let allData = {
             link: 'https://www.instagram.com/aakrit_subedi'
         },
         {
-            id:4,
+            id: 4,
+            iconOf: <FaLinkedinIn/>,
+            link: 'https://www.linkedin.com/in/aakrit-subedi-942a5875/'
+        },
+        {
+            id:5,
             iconOf: <FaGithub/>,
             link: 'https://www.github.com/aakritsubedi'
         }
@@ -36,7 +44,7 @@ let allData = {
     myEducation:[
         {
             date: '2015-2019',
-            collegeName: 'Kantipur Enfineering College',
+            collegeName: 'Kantipur Engineering College',
             title: 'Bachelor\'s degree of Engineering'
         },
         {

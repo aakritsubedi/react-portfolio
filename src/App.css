@@ -56,7 +56,25 @@
   border-radius: 50%;
   margin:0 15px;
 }
-
+/* Skills */
+.skills{
+  list-style: none;
+  padding:10px 5px;
+}
+.skills li{
+  float: left;
+  width: auto;
+  padding:2px 13px;
+  border: 1px solid #f4f4f4;
+  margin:3px 4px;
+  background-color: #4C4B4B;
+  color: #ffffff;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.skills li:hover{
+  background-color: #2C3335;
+}
 /* Footer */
 .footer{
   background-color: #000000;
