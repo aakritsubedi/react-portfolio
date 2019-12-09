@@ -6,7 +6,7 @@
     React Portfolio is a project in react.js. The output screenshots are attached below.
 </p>
 <div>
-    <img src='portfolioAAkritS.png'>
+    <a href='portfolioAAkritS.png'><img src='portfolioAAkritS.png'>></a>
 </div>
 <hr/>
 <h3>Create your portfolio</h3>
