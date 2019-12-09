@@ -14,6 +14,11 @@ function Table(props){
             pageSizeOptions={[5, 10, 20, 40, 80, 160]} 
             filterable={true} loading={false} 
             sortable={true} minRows={1}
+            getTheadFilterThProps={() => {
+                return {
+                    style: { overflow: 'visible',textAlign:'left'}
+                };
+            }}
         />
     )
     return table;

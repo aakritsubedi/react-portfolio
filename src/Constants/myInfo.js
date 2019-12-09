@@ -2,6 +2,11 @@ import React from 'react';
 import Select from 'react-select';
 
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaGithub } from "react-icons/fa";
+const options=[
+    {value: 'all', label: 'All Data'},
+    {value: 'Completed', label:'Completed'},
+    {value: 'Working on it',label:'Working on it'}
+];
 let allData = {
     myInfo: {
         name: 'Aakrit Subedi',
@@ -175,69 +180,75 @@ let allData = {
             minWidth: 40
         },
         {
-            Header: "Project Title",
-            accessor: "projectName",
-            sortable: false
+            Header: 'Project Info',
+            columns: [
+                {
+                    Header: "Project Title",
+                    accessor: "projectName",
+                    sortable: false
+                },
+                {
+                    Header: "Description",
+                    accessor: "desc",
+                    sortable: false,
+                    filterable: false
+                },
+                {
+                    Header: "Tech Stack",
+                    accessor: 'techStack',
+                    sortable: false,
+                    filterable: true,
+                    Cell: row => (
+                        <ul className='skill-set'>
+                            {row.value.map((item, index) => {
+                                return <li key={index}>{item}</li>
+                            })}
+                        </ul>
+                    ),
+                    id: 'techStack',
+                    filterMethod: (filter, row) => {
+                        if ((row.techStack.toString().toLowerCase()).includes(filter.value.toLowerCase())) {
+                            return true;
+                        }
+                    }
+                }
+            ]
         },
         {
-            Header: "Description",
-            accessor: "desc",
-            sortable: false,
-            filterable: false
-        },
-        {
-            Header: "Tech Stack",
-            accessor: 'techStack',
-            sortable: false,
-            filterable: true,
-            Cell: row => (
-                <ul className='skill-set'>
-                    {row.value.map((item, index) => {
-                        return <li key={index}>{item}</li>
-                    })}
-                </ul>
-            ),
-            id: 'techStack',
-            filterMethod: (filter, row) => {
-                if ((row.techStack.toString().toLowerCase()).includes(filter.value.toLowerCase())) {
-                    return true;
+            Header: 'Extra Info',
+            columns: [
+                {
+                    Header: "Progress",
+                    accessor: "progress",
+                    sortable: true,
+                    filterable: false,
+                    Cell: row => <div className='myProgress' title={row.value + '% Completed'}><div className='myBar' style={{ width: row.value + '%' }}>{row.value + '%'}</div></div>
+                },
+                {
+                    Header: "Status",
+                    accessor: "progress",
+                    sortable: false,
+                    width: 210,
+                    maxWidth: 250,
+                    minWidth: 175,
+                    Cell: ({ value }) => (value < 100 ? <span className='pending'>Working on it</span> : <span className='success'>Completed</span>),
+                    id: 'status',
+                    filterMethod: (filter, row) => {
+                        if (filter.value === "all") {
+                            return true;
+                        }
+                        if (filter.value === "Completed") {
+                            return row[filter.id] === 100;
+                        }
+                        else {
+                            return row[filter.id] !== 100;
+                        }
+                    },
+                    Filter: ({ filter, onChange }) =>    
+                        <Select className='Select' placeholder='Search Status...' options={options} onChange={event => onChange(event.value)} />       
                 }
-            }
-        },
-        {
-            Header: "Progress",
-            accessor: "progress",
-            sortable: true,
-            filterable: false,
-            Cell: row => <div className='myProgress' title={row.value + '% Completed'}><div className='myBar' style={{ width: row.value + '%' }}>{row.value + '%'}</div></div>
-        },
-        {
-            Header: "Status",
-            accessor: "progress",
-            sortable: false,
-            width: 200,
-            maxWidth: 250,
-            minWidth: 150,
-            Cell: ({ value }) => (value < 100 ? <span className='pending'>Working on it</span> : <span className='success'>Completed</span>),
-            id: 'status',
-            filterMethod: (filter, row) => {
-                if (filter.value === "all") {
-                    return true;
-                }
-                if (filter.value === "Completed") {
-                    return row[filter.id] === 100;
-                }
-                else {
-                    return row[filter.id] !== 100;
-                }
-            },
-            Filter: ({ filter, onChange }) =>
-                <select onChange={event => onChange(event.target.value)} value={filter ? filter.value : "all"}>
-                    <option value='all'>All</option>
-                    <option value='Completed'>Completed</option>
-                    <option value='Working on it'>Working on it</option>
-                </select>        
-        },
+            ]
+        }
 
     ]
 }
