@@ -5,11 +5,13 @@ import MainNav from '../Components/MainNav/MainNav';
 import Banner from '../Components/Banner/Banner';
 import Education from '../Components/Education/Education';
 import ProjectWork from '../Components/ProjectWork/ProjectWork';
+import Skills from '../Components/Skills/Skills';
+import Table from '../Components/Table/Table';
 import Footer from '../Components/Footer/Footer';
 
+import Select from 'react-select'
 
 import * as myData from '../Constants/myInfo';
-import Skills from '../Components/Skills/Skills';
 
 class Portfolio extends Component{
     constructor(){
@@ -38,6 +40,8 @@ class Portfolio extends Component{
         this.myInfo= myData.default.myInfo;
         this.myEducation =myData.default.myEducation;
         this.myProject = myData.default.myProject;
+        this.column = myData.default.column;
+        this.dataSet =this.myProject;
 
     }
     render(){
@@ -58,6 +62,8 @@ class Portfolio extends Component{
                         <div className='col-md-12'>
                             <a name='project'></a>
                             <ProjectWork myProject={this.myProject} />
+                            <hr/>
+                            <Table  columns={this.column} data={this.dataSet}/>
                         </div>
                     </div>
                 </div>

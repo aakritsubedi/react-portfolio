@@ -75,6 +75,23 @@
 .skills li:hover{
   background-color: #2C3335;
 }
+
+.skill-set{
+  list-style: none;
+  padding:5px 2px;
+}
+.skill-set li{
+  float: left;
+  width: auto;
+  padding:1px 6px;
+  border: 1px solid #f4f4f4;
+  margin:1px 2px;
+  background-color: #4C4B4B;
+  color: #ffffff;
+  border-radius:5px;
+  font-weight: bold;
+  font-size: 12px;
+}
 /* Footer */
 .footer{
   background-color: #000000;
@@ -103,3 +120,22 @@
   color: #ffffff;
 }
 
+/* Progress Bar */
+.myProgress {
+  width: 100%;
+  background-color: grey;
+  text-align: center;
+  font-size: 10px;
+  color: #ffffff;
+  font-weight: bold;
+}  
+.myBar {
+  line-height: 20px;
+  background-color: rgb(10, 233, 10);
+}
+.success{
+  color: green;
+}
+.pending{
+  color: rgb(13, 106, 211);
+}
