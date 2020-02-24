@@ -9,8 +9,6 @@ import Skills from '../Components/Skills/Skills';
 import Table from '../Components/Table/Table';
 import Footer from '../Components/Footer/Footer';
 
-import Select from 'react-select'
-
 import * as myData from '../Constants/myInfo';
 
 class Portfolio extends Component{
